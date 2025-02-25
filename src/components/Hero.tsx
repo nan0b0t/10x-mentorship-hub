@@ -3,8 +3,27 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
-      <div className="container max-w-6xl">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6 overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 bg-primary/80 z-10" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source
+            src="https://player.vimeo.com/external/528830313.sd.mp4?s=2c1a7ffa6c58d70ef6c2e0501097462be435e668&profile_id=164&oauth2_token_id=57447761"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Content */}
+      <div className="container max-w-6xl relative z-20">
         <div className="text-center space-y-8 animate-fadeIn">
           <h1 className="heading-xl max-w-4xl mx-auto">
             Transform Your Business with Expert Mentorship
