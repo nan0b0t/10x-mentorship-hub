@@ -1,5 +1,5 @@
 
-import { Trophy, Users, TrendingUp } from 'lucide-react';
+import { Trophy, Users, TrendingUp, Award, Target, BookOpen } from 'lucide-react';
 
 const achievements = [
   {
@@ -13,9 +13,24 @@ const achievements = [
     description: "Transformed through our mentorship programs"
   },
   {
-    icon: TrendingUp,
+    icon: Award,
     title: "Multiple Best Sellers",
     description: "Author of revolutionary business growth books"
+  },
+  {
+    icon: Target,
+    title: "97% Success Rate",
+    description: "Our students achieve their business goals"
+  },
+  {
+    icon: BookOpen,
+    title: "Custom Curriculum",
+    description: "Tailored programs for your specific needs"
+  },
+  {
+    icon: TrendingUp,
+    title: "$1B+ Generated",
+    description: "Combined revenue growth for our clients"
   }
 ];
 
@@ -26,7 +41,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4">About Grant Cardone</h2>
           <p className="body-base text-muted-foreground max-w-3xl mx-auto">
-            A renowned sales training consultant, New York Times best-selling author, and business transformation expert helping organizations and individuals achieve extraordinary results.
+            A renowned business magnate, real estate investor, and sales training expert, Grant Cardone has helped thousands of businesses and individuals achieve extraordinary success through his proven methodologies and mentorship programs.
           </p>
         </div>
 
@@ -34,7 +49,7 @@ const About = () => {
           {achievements.map((achievement, index) => (
             <div 
               key={index}
-              className="glass-card p-6 rounded-lg text-center"
+              className="glass-card p-6 rounded-lg text-center transform transition-all duration-300 hover:scale-105"
             >
               <div className="flex justify-center mb-4">
                 <achievement.icon size={40} className="text-primary" />
