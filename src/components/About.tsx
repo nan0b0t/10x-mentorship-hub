@@ -36,9 +36,9 @@ const achievements = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-secondary">
+    <section id="about" className="py-20 bg-[#2E236C]">
       <div className="container max-w-6xl px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fadeIn">
           <h2 className="heading-lg mb-4">About Grant Cardone</h2>
           <p className="body-base text-muted-foreground max-w-3xl mx-auto">
             A renowned business magnate, real estate investor, and sales training expert, Grant Cardone has helped thousands of businesses and individuals achieve extraordinary success through his proven methodologies and mentorship programs.
@@ -49,10 +49,15 @@ const About = () => {
           {achievements.map((achievement, index) => (
             <div 
               key={index}
-              className="glass-card p-6 rounded-lg text-center transform transition-all duration-300 hover:scale-105"
+              className="glass-card p-6 rounded-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              style={{ 
+                animation: `fadeInUp ${0.3 + index * 0.1}s ease-out forwards`,
+                opacity: 0,
+                transform: 'translateY(20px)'
+              }}
             >
               <div className="flex justify-center mb-4">
-                <achievement.icon size={40} className="text-primary" />
+                <achievement.icon size={40} className="text-secondary animate-float" />
               </div>
               <h3 className="heading-md mb-2">{achievement.title}</h3>
               <p className="text-muted-foreground">{achievement.description}</p>

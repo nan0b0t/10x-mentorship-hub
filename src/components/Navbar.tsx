@@ -27,12 +27,12 @@ const Navbar = () => {
             <a href="#about" className="nav-link">About</a>
             <a href="#programs" className="nav-link">Programs</a>
             <a href="#testimonials" className="nav-link">Testimonials</a>
-            <a href="#contact" className="btn-primary">Get Started</a>
+            <a href="#contact" className="btn-secondary hover:bg-secondary hover:text-white transition-all duration-300">Get Started</a>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -41,12 +41,12 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg border-t">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-[#2E236C]/95 backdrop-blur-lg shadow-lg border-t">
             <div className="flex flex-col space-y-4 p-6">
-              <a href="#about" className="nav-link">About</a>
-              <a href="#programs" className="nav-link">Programs</a>
-              <a href="#testimonials" className="nav-link">Testimonials</a>
-              <a href="#contact" className="btn-primary text-center">Get Started</a>
+              <a href="#about" className="text-white/90 hover:text-white transition-colors">About</a>
+              <a href="#programs" className="text-white/90 hover:text-white transition-colors">Programs</a>
+              <a href="#testimonials" className="text-white/90 hover:text-white transition-colors">Testimonials</a>
+              <a href="#contact" className="btn-secondary bg-secondary hover:bg-secondary/80 text-white transition-all duration-300 text-center">Get Started</a>
             </div>
           </div>
         )}
