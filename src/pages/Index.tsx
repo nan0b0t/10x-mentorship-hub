@@ -11,10 +11,11 @@ import { useEffect } from "react";
 const Index = () => {
   // Find all "Get Started" buttons and add click listeners to open Tawk.to chat
   useEffect(() => {
-    const ctaButtons = document.querySelectorAll('.btn-primary');
+    const ctaButtons = document.querySelectorAll('.btn-primary, button');
     ctaButtons.forEach(button => {
       if (button instanceof HTMLElement && 
-          button.textContent?.includes('Get Started')) {
+          (button.textContent?.includes('Get Started') || 
+           button.textContent?.includes('Learn More'))) {
         button.addEventListener('click', (e) => {
           e.preventDefault();
           openTawkToChat();
@@ -25,7 +26,8 @@ const Index = () => {
     return () => {
       ctaButtons.forEach(button => {
         if (button instanceof HTMLElement && 
-            button.textContent?.includes('Get Started')) {
+            (button.textContent?.includes('Get Started') || 
+             button.textContent?.includes('Learn More'))) {
           button.removeEventListener('click', openTawkToChat);
         }
       });
@@ -33,7 +35,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary to-primary-light">
+    <div className="min-h-screen bg-gradient-to-b from-primary to-primary-light overflow-hidden">
       <Navbar />
       <Hero />
       <Programs />

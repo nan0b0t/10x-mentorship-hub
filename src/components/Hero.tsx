@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6 overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-primary/80 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary-light/90 z-10" />
         <video
           autoPlay
           muted
@@ -25,17 +25,18 @@ const Hero = () => {
       {/* Content */}
       <div className="container max-w-6xl relative z-20">
         <div className="text-center space-y-8 animate-fadeIn">
-          <h1 className="heading-xl max-w-4xl mx-auto">
+          <span className="inline-block bg-secondary/20 text-secondary px-4 py-1 rounded-full font-medium mb-4 animate-float">Premium Mentorship</span>
+          <h1 className="heading-xl max-w-4xl mx-auto text-gradient">
             Transform Your Business with Expert Mentorship
           </h1>
-          <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="body-lg text-white/80 max-w-2xl mx-auto">
             Join Grant Cardone's exclusive mentorship program and learn the proven strategies for success in cryptocurrency, forex, and business scaling.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <a href="#programs" className="btn-primary flex items-center gap-2">
+            <a href="#programs" className="btn-primary flex items-center gap-2 font-medium shadow-lg shadow-secondary/20">
               Explore Programs <ArrowRight size={20} />
             </a>
-            <a href="#about" className="btn-secondary">
+            <a href="#about" className="btn-secondary font-medium border border-white/10 hover:border-white/20">
               Learn More
             </a>
           </div>

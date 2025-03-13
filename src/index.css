@@ -54,7 +54,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:border-secondary/20;
   }
 
   .heading-xl {
@@ -82,11 +82,15 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-secondary text-white rounded-md transition-all hover:bg-secondary/90 active:scale-95;
+    @apply px-6 py-3 bg-secondary text-white rounded-md transition-all hover:bg-secondary/90 active:scale-95 shadow-lg hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-white/10 text-white rounded-md transition-all hover:bg-white/20 active:scale-95;
+    @apply px-6 py-3 bg-white/10 text-white rounded-md transition-all hover:bg-white/20 active:scale-95 backdrop-blur-sm;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-white via-white to-secondary/90 bg-clip-text text-transparent;
   }
 }
 
@@ -131,4 +135,3 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
-
